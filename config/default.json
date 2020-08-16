@@ -1,0 +1,7 @@
+{
+  "mongoURI": "mongodb+srv://YunqingMa:Mlzjs8303030@devconnector.zgejz.mongodb.net/DevConnector?retryWrites=true&w=majority",
+  "jwtSecret": "bla bla bla",
+  "githubClientId": "a49254e372e2c28dc09a",
+  "githubSecret": "c0b714047cb76aca82c645fb4e2862782fdf24d6",
+  "githubToken": "b46444317487305d7e4e4a8eb94161a316540eaa"
+}
