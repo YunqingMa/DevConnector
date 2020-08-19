@@ -142,7 +142,7 @@ router.get('/user/:user_id', checkObjectId('user_id'), async (req, res) => {
 router.delete('/', auth, async (req, res) => {
   try {
     // // Remove user posts
-    // await Post.deleteMany({ user: req.user.id });
+    await Post.deleteMany({ user: req.user.id });
     // Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     // Remove user
@@ -168,7 +168,7 @@ router.put(
       check('from', 'From date is required and needs to be from the past')
         .not()
         .isEmpty()
-      // .custom((value, { req }) => (req.body.to ? value < req.body.to : true))
+        .custom((value, { req }) => (req.body.to ? value < req.body.to : true))
     ]
   ],
   async (req, res) => {
@@ -248,7 +248,7 @@ router.put(
       check('from', 'From date is required and needs to be from the past')
         .not()
         .isEmpty()
-      // .custom((value, { req }) => (req.body.to ? value < req.body.to : true))
+        .custom((value, { req }) => (req.body.to ? value < req.body.to : true))
     ]
   ],
   async (req, res) => {
